@@ -10,13 +10,20 @@
   }
 
   function kedua() {
-    confirm("Apakah kamu yakin untuk alert kedua?");
+    alert("ini alert ketiga");
   }
 
   function ketiga() {
     alert("Ini alert ketiga!");
   }
+  
+  function gambar1() {
+alert('ganti');
+  }
 
+  function gambar2() {
+alert('ganti');
+  }
 
     </script>
 
@@ -27,11 +34,18 @@
     <p>hai <br/> kau</p>
     <p>ini ke <sup>atas</sup><sub>bawah</sub></p>
     <ul>
-        <li><button class="tombol" onclick="pertama()">alert pertama</button></li>
-        <li><button class="tombol" onclick="kedua()">alert kedua</button></li>
-        <li><button class="tombol" onclick="ketiga()">alert ketiga</button></li>
+        <li><button class="tombol" onclick="pertama()"><b>alert pertama</b></button></li>
+        <li><button class="tombol" onclick="kedua()"><b>alert kedua</b></button></li>
+        <li><button class="tombol" onclick="ketiga()"><b>alert ketiga</b></button></li>
     </ul>
     <img src="./kucingKece.png" alt="kucing kece" />
+
+
+    <div class="wrapper">
+
+    <button class="tombo2" onclick="gambar1()">gambar 1</button>
+    <button class="tombo2" onclick="gambar2()">gambar 2</button>
+    </div>
     <!-- aiiiiiii kece cuk wkkkkk -->
     <style>
         h1 {
@@ -53,10 +67,37 @@
          }
 
          .tombol {
-            background-color:rgb(206, 255, 239);
-            margin: 2px;
+  width: 80px;
+  height: 80px;
+  background-color: #324c49;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%; /* bikin bulat */
+  cursor: pointer;
+  margin: 5px 0;
             
          } 
+    
+     .tombo2 {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(184, 190, 189);
+  color: #121111;
+  border: solid ;
+  border-radius: 10px; /* bikin bulat */
+  cursor: pointer;
+  margin: ;
+            
+         } 
+
+         .wrapper {
+ display: flex;
+  justify-content: center; /* bikin sejajar di tengah */
+  gap: 20px;               /* jarak antar tombol */
+  margin-top: 20px 0 20px 0;        /* jarak dari atas */
+
+}
+
 
     </style>
           
