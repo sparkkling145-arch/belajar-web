@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>project_baru</title>
+    <script>
+       function pertama() {
+    alert("Ini alert pertama!");
+  }
+
+  function kedua() {
+    confirm("Apakah kamu yakin untuk alert kedua?");
+  }
+
+  function ketiga() {
+    alert("Ini alert ketiga!");
+  }
+
+
+    </script>
+
 </head>
 <body>
     <h1><i>hello word</i></h1>
@@ -11,7 +27,9 @@
     <p>hai <br/> kau</p>
     <p>ini ke <sup>atas</sup><sub>bawah</sub></p>
     <ul>
-   
+        <li><button class="tombol" onclick="pertama()">alert pertama</button></li>
+        <li><button class="tombol" onclick="kedua()">alert kedua</button></li>
+        <li><button class="tombol" onclick="ketiga()">alert ketiga</button></li>
     </ul>
     <img src="./kucingKece.png" alt="kucing kece" />
     <!-- aiiiiiii kece cuk wkkkkk -->
@@ -20,6 +38,28 @@
             text-align: center;
             color: aquamarine;
         }
+
+        img {
+            width: 300px;
+            border: solid rgb(138, 0, 0) 5px;
+            border-radius: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+
+         body {
+    margin: 0;
+    padding: 0 20px;
+         }
+
+         .tombol {
+            background-color:rgb(206, 255, 239);
+            margin: 2px;
+            
+         } 
+
     </style>
+          
+    
 </body>
 </html>
