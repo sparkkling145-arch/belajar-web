@@ -1,106 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project_baru</title>
-    <script>
-       function pertama() {
-    alert("Ini alert pertama!");
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my project</title>
+  <link rel="icon" type="image/png"/>
 
-  function kedua() {
-    alert("ini alert ketiga");
-  }
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  function ketiga() {
-    alert("Ini alert ketiga!");
-  }
-  
-  function gambar1() {
-alert('ganti');
-  }
+     <link rel="stylesheet" href="">
 
-  function gambar2() {
-alert('ganti');
-  }
+     <style>
 
-    </script>
+         .tubuh {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+       background-image: 
+       radial-gradient(circle at center,
+          #ff0000 0%,
+          #f80404fd 30%,
+          #0b0b0b 100%);
+        background-size: cover;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      height: 100vh;
+    }
 
-</head>
-<body>
-    <h1><i>hello word</i></h1>
-<hr/>
-    <p>hai <br/> kau</p>
-    <p>ini ke <sup>atas</sup><sub>bawah</sub></p>
-    <ul>
-        <li><button class="tombol" onclick="pertama()"><b>alert pertama</b></button></li>
-        <li><button class="tombol" onclick="kedua()"><b>alert kedua</b></button></li>
-        <li><button class="tombol" onclick="ketiga()"><b>alert ketiga</b></button></li>
-    </ul>
-    <img src="./kucingKece.png" alt="kucing kece" />
-
-
-    <div class="wrapper">
-
-    <button class="tombo2" onclick="gambar1()">gambar 1</button>
-    <button class="tombo2" onclick="gambar2()">gambar 2</button>
-    </div>
-    <!-- aiiiiiii kece cuk wkkkkk -->
-    <style>
-        h1 {
+        .container {
+       width: 50%;
+       height: 50vh;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      
+        }
+    
+        .judul1 {  
             text-align: center;
-            color: aquamarine;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
         }
 
-        img {
-            width: 300px;
-            border: solid rgb(138, 0, 0) 5px;
-            border-radius: 100px;
-            display: block;
-            margin: 0 auto;
+        * {
+            font-family: 'Arial', sans-serif;
+        }
+    
+        .list {
+          list-style: disc;
+         padding-left: 20px;
         }
 
-         body {
-    margin: 0;
-    padding: 0 20px;
-         }
-
-         .tombol {
-  width: 80px;
-  height: 80px;
-  background-color: #324c49;
-  color: #ffffff;
-  border: none;
-  border-radius: 50%; /* bikin bulat */
-  cursor: pointer;
-  margin: 5px 0;
-            
-         } 
+        .list::before {
+         
+         
+        }
     
-     .tombo2 {
-  width: 80px;
-  height: 80px;
-  background-color: rgb(184, 190, 189);
-  color: #121111;
-  border: solid ;
-  border-radius: 10px; /* bikin bulat */
-  cursor: pointer;
-  margin: ;
-            
-         } 
-
-         .wrapper {
- display: flex;
-  justify-content: center; /* bikin sejajar di tengah */
-  gap: 20px;               /* jarak antar tombol */
-  margin-top: 20px 0 20px 0;        /* jarak dari atas */
-
-}
-
-
-    </style>
-          
+        .list li {
+            margin-bottom: 10px;
+            color: #000000;
+        }
     
+        .list a {
+           display: inline;
+           display: inline-block;
+            color: #007BFF;
+        }
+    
+        .list a:hover {
+          color: #007BFF;
+         text-decoration: underline;
+        }
+     </style>
+</head>
+
+
+<body class="tubuh">
+    <div class="container">
+        <h1 class="judul1"><strong>PENGENALAN</strong></h1>
+        <ol class="list">
+            <li><a href="https://youtu.be/R-fZ_dVy2os?si=zAnj_sGGEPF4AXSc" target="_blank">pengenalan syntax html</a></li>
+        </ol>
+
+    </div>
+  
+   
+ <script src="java.js"></script>
+
 </body>
+
 </html>
