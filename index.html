@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>my project</title>
-  <link rel="icon" type="image/png"/>
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -23,19 +22,20 @@
           #f80404fd 30%,
           #0b0b0b 100%);
         background-size: cover;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      height: 100vh;
+    
+       min-height: 100vh;
+       min-width: 100vh;
     }
 
         .container {
        width: 80%;
-       height: 80vh;
-        margin: 0 auto;
-        background-color: rgb(255, 255, 255);
-        padding: 20px;
-        border-radius: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      
+       min-height: 50vh;
+       margin: 0 auto;
+       background-color: rgb(255, 255, 255);
+       padding: 20px;
+       border-radius: 20px;
+       overflow-y: auto;
+       box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
         }
 
     
@@ -49,11 +49,13 @@
 
         * {
             font-family: 'Arial', sans-serif;
+           
         }
     
         .list {
           list-style: disc;
          padding-left: 20px;
+         
         }
 
         .list::before {
@@ -63,18 +65,45 @@
     
         .list li {
             margin-bottom: 10px;
-            color: #000000;
+            color: #ffffff;
+            mix-blend-mode: difference;  
+            text-shadow: 2px 2px 10px rgb(251, 247, 247, 0.5);
         }
     
-        .list a {
-           display: inline;
+        a {
            display: inline-block;
             color: #007BFF;
+            text-decoration: none;
+                padding: 5px 10px;
+                border-radius: 5px;
+                transition: background-color 0.5s, color 0.3s;
+                border: 2px solid rgb(0, 123, 255);
+                box-shadow: 0px 0px 10px  rgb(0, 123, 255);
         }
     
-        .list a:hover {
+        a:hover {
           color: #007BFF;
          text-decoration: underline;
+         background-color: #000000;
+        }
+
+        /* box wrapper for the list items */
+        .box {
+          border: 2px solid #333;
+          padding: 10px;
+          border-radius: 10px;
+           background-color: rgba(255, 255, 255, 0.8);
+           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          display: flex;
+          flex-direction: column;
+        }
+
+        /* footer link styling */
+        .footer-link {
+          text-align: center;
+          margin-top: 20px;
+          padding-top: 15px;
+          border-top: 1px solid #ccc;
         }
      </style>
 </head>
@@ -84,9 +113,11 @@
     <div class="container">
         <h1 class="judul1"><strong>PENGENALAN</strong></h1>
 
-        <ol class="list">
+        <!-- wrap the list in a box div so it stays inside and can be styled -->
+        <div class="box">
+          <ol class="list">
             <li><h2> <strong>Struktur Dasar HTML</strong> </h2></li>
-            <li><P>​Cara Cepat: Di VS Code, ketik tanda seru ! lalu tekan Enter atau Tab untuk membuat struktur dasar secara otomatisl</P></li>
+            <li><p>​Cara Cepat: Di VS Code, ketik tanda seru ! lalu tekan Enter atau Tab untuk membuat struktur dasar secara otomatisl</p></li>
             <li><h2> <strong>Elemen Penting</strong> </h2></li>
             <li><p> <b> <code>&lt;!DOCTYPE html&gt;</code> </b>: Memberitahu browser bahwa dokumen ini menggunakan standar HTML5</p></li>
             <li><p> <b> <code>&lt;html&gt;</code> </b>: Pembungkus utama seluruh konten halaman</p></li>
@@ -95,8 +126,15 @@
             <li><h2> <strong>Konsep Syntax (Tag & Atribut)</strong> </h2></li>
             <li><p> <b> <code>&lt;HTML&gt;</code> </b>: Terdiri dari tag pembuka <code>(misal: &lt;title&gt;)</code>  dan tag penutup yang memiliki garis miring <code>(misal: &lt;/title&gt;)</code> . Namun, ada beberapa tag yang tidak memerlukan penutup, seperti tag <code>&lt;meta&gt;</code> .</p></li>
             <li><p>Atribut: Memberikan informasi tambahan pada tag. Atribut diletakkan di dalam tag pembuka dengan format nama_atribut="nilai" . Contoh: <code>&lt;html lang="en"&gt;</code> atau <code>&lt;meta charset="UTF-8"&gt;</code>.</p></li>
-        </ol>
-       
+            <li><h2> <strong>Menjalankan Kode</strong> </h2></li>
+            <li><p>Klik tombol "Go Live" di bagian bawah VS Code (setelah instal Live Server) untuk membuka proyek di browser.</p></li>
+            <li><p>Perubahan pada tag <code>&lt;title&gt;</code> di dalam <code>&lt;head&gt;</code> akan mengubah teks yang muncul pada tab browser.</p></li>
+          </ol>
+
+        <div class="footer-link">
+          <a href="https://youtu.be/R-fZ_dVy2os?si=zAnj_sGGEPF4AXSc" target="_blank"><strong>Video Pengenalan Syntax HTML</strong></a>
+        </div>
+        </div>
 
     </div>
   
