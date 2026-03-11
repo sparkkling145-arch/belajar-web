@@ -14,114 +14,267 @@
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         min-height: 100vh;
-        background-image: url("gengar.jpg");
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-image: url("projek.jpeg");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        padding: 40px 20px;
+        padding: 50px 20px;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 0;
       }
 
       .container {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
+        position: relative;
+        z-index: 1;
       }
 
       h1 {
         text-align: center;
         color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        margin-bottom: 40px;
-        font-size: 2.5em;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        margin-bottom: 50px;
+        font-size: 3em;
+        font-weight: 700;
+        letter-spacing: 2px;
+        animation: fadeInDown 0.8s ease;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       ul {
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
         padding: 0;
       }
 
       li {
         position: relative;
+        animation: fadeInUp 0.6s ease backwards;
+      }
+
+      li:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      li:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      li:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      li:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        padding: 30px;
-        transition: all 0.3s ease;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 25px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        padding: 25px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+      }
+
+      .card:hover::before {
+        left: 100%;
       }
 
       .card:hover {
-        transform: translateY(-10px);
-        background: rgba(255, 255, 255, 0.15);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        transform: translateY(-15px) scale(1.02);
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.5);
       }
 
       .card-image {
         width: 100%;
-        height: 200px;
+        height: 220px;
         object-fit: cover;
-        border-radius: 15px;
+        border-radius: 18px;
         margin-bottom: 20px;
+        transition: transform 0.4s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .card:hover .card-image {
+        transform: scale(1.05);
       }
 
       .card-title {
         color: white;
-        font-size: 1.5em;
-        margin-bottom: 15px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        font-size: 1.6em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
       }
 
       .card-links {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
+        position: relative;
+        z-index: 1;
       }
 
       .card-link {
         color: #fff;
         text-decoration: none;
-        padding: 12px 20px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 10px;
+        padding: 14px 22px;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 12px;
         transition: all 0.3s ease;
         text-align: center;
-        font-weight: 500;
+        font-weight: 600;
+        font-size: 0.95em;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card-link::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.5s,
+          height 0.5s;
+      }
+
+      .card-link:hover::before {
+        width: 300px;
+        height: 300px;
       }
 
       .card-link:hover {
-        background: rgba(255, 255, 255, 0.3);
-        transform: scale(1.05);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .card-link span {
+        position: relative;
+        z-index: 1;
       }
 
       .link-web {
-        background: rgba(59, 130, 246, 0.3);
+        background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.4),
+          rgba(37, 99, 235, 0.4)
+        );
       }
 
       .link-web:hover {
-        background: rgba(59, 130, 246, 0.5);
+        background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.6),
+          rgba(37, 99, 235, 0.6)
+        );
       }
 
       .link-html {
-        background: rgba(16, 185, 129, 0.3);
+        background: linear-gradient(
+          135deg,
+          rgba(16, 185, 129, 0.4),
+          rgba(5, 150, 105, 0.4)
+        );
       }
 
       .link-html:hover {
-        background: rgba(16, 185, 129, 0.5);
+        background: linear-gradient(
+          135deg,
+          rgba(16, 185, 129, 0.6),
+          rgba(5, 150, 105, 0.6)
+        );
       }
 
       .link-image {
-        background: rgba(245, 158, 11, 0.3);
+        background: linear-gradient(
+          135deg,
+          rgba(245, 158, 11, 0.4),
+          rgba(217, 119, 6, 0.4)
+        );
       }
 
       .link-image:hover {
-        background: rgba(245, 158, 11, 0.5);
+        background: linear-gradient(
+          135deg,
+          rgba(245, 158, 11, 0.6),
+          rgba(217, 119, 6, 0.6)
+        );
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2em;
+        }
+
+        ul {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
       }
     </style>
   </head>
@@ -135,99 +288,67 @@
           <div class="card">
             <img src="kucingKece.png" alt="Card Image" class="card-image" />
             <h2 class="card-title">Card Title 1</h2>
-            <div class="card-links">
-              <a
-                href="https://www.google.com"
-                class="card-link link-web"
-                target="_blank"
-                >🌐 Visit Website</a
-              >
-              <a href="index.html" class="card-link link-html"
-                >📄 Go to HTML Page</a
-              >
-              <a
-                href="kucingKece.png"
-                class="card-link link-image"
-                target="_blank"
-                >🖼️ View Image</a
-              >
-            </div>
           </div>
         </li>
-
-        <!-- Card 2 - Ganti sesuai kebutuhan -->
-        <li>
-          <div class="card">
-            <img
-              src="Plum_Blossom_Eleven_9.png"
-              alt="Card Image"
-              class="card-image" />
-            <h2 class="card-title">Card Title 2</h2>
-            <div class="card-links">
-              <a
-                href="https://www.youtube.com"
-                class="card-link link-web"
-                target="_blank"
-                >🌐 Visit Website</a
-              >
-              <a href="myProject.html" class="card-link link-html"
-                >📄 Go to HTML Page</a
-              >
-              <a
-                href="Plum_Blossom_Eleven_9.png"
-                class="card-link link-image"
-                target="_blank"
-                >🖼️ View Image</a
-              >
-            </div>
-          </div>
-        </li>
-
-        <!-- Card 3 - Ganti sesuai kebutuhan -->
-        <li>
-          <div class="card">
-            <img src="propilAnda.jpeg" alt="Card Image" class="card-image" />
-            <h2 class="card-title">Card Title 3</h2>
-            <div class="card-links">
-              <a
-                href="https://www.github.com"
-                class="card-link link-web"
-                target="_blank"
-                >🌐 Visit Website</a
-              >
-              <a href="index.html" class="card-link link-html"
-                >📄 Go to HTML Page</a
-              >
-              <a
-                href="propilAnda.jpeg"
-                class="card-link link-image"
-                target="_blank"
-                >🖼️ View Image</a
-              >
-            </div>
-          </div>
-        </li>
-
-        <!-- Tambah card baru di sini kalau mau -->
       </ul>
     </div>
   </body>
-  =======
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
+</html>
+                    <div class="card-links">
+                        <a href="https://www.google.com" class="card-link link-web" target="_blank">
+                            <span>🌐 Visit Website</span>
+                        </a>
+                        <a href="index.html" class="card-link link-html">
+                            <span>📄 Go to HTML Page</span>
+                        </a>
+                        <a href="kucingKece.png" class="card-link link-image" target="_blank">
+                            <span>🖼️ View Image</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
 
-      <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-             background: linear-gradient(to right, #2c3e50, #bdc3c7);
-      </style>
-    </head>
-    <body></body>
-    >>>>>>> 1d2617ce810f8ae8bacffd4e1c122940f23c2b97
-  </html>
+            <!-- Card 2 - Ganti sesuai kebutuhan -->
+            <li>
+                <div class="card">
+                    <img src="Plum_Blossom_Eleven_9.png" alt="Card Image" class="card-image">
+                    <h2 class="card-title">Card Title 2</h2>
+                    <div class="card-links">
+                        <a href="https://www.youtube.com" class="card-link link-web" target="_blank">
+                            <span>🌐 Visit Website</span>
+                        </a>
+                        <a href="myProject.html" class="card-link link-html">
+                            <span>📄 Go to HTML Page</span>
+                        </a>
+                        <a href="Plum_Blossom_Eleven_9.png" class="card-link link-image" target="_blank">
+                            <span>🖼️ View Image</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Card 3 - Ganti sesuai kebutuhan -->
+            <li>
+                <div class="card">
+                    <img src="propilAnda.jpeg" alt="Card Image" class="card-image">
+                    <h2 class="card-title">Card Title 3</h2>
+                    <div class="card-links">
+                        <a href="https://www.github.com" class="card-link link-web" target="_blank">
+                            <span>🌐 Visit Website</span>
+                        </a>
+                        <a href="index.html" class="card-link link-html">
+                            <span>📄 Go to HTML Page</span>
+                        </a>
+                        <a href="propilAnda.jpeg" class="card-link link-image" target="_blank">
+                            <span>🖼️ View Image</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Tambah card baru di sini kalau mau -->
+            
+        </ul>
+    </div>
+</body>
 </html>
