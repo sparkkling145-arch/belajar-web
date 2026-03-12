@@ -1,85 +1,71 @@
- body {
-       background-image: 
-       radial-gradient(circle at center,
-          #ff0000 0%,
-          #f80404fd 30%,
-          #0b0b0b 100%);
+* {
+  margin: 0;
+  padding-top: 0;
+  box-sizing: border-box;
+}
+
+body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-image: url("kota.jpg");
         background-size: cover;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      height: 100vh;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 5px 0 50px 0;
+        position: relative;
+      }
 
-    }
+      .header {
+        width: 50vh;
+        height: 10vh;
+        display: grid;
+        place-items: center;
+        margin: 20px 0 20px 0;
+        background-color: #ADA996;
+        color: #F2F2F2;
+        border: solid 2px #F2F2F2;
+        border-radius: 50px;
+        box-shadow: 0px 5px 5px rgb(0, 0, 0);
+      }
 
-    
-    .judul {
-      margin-right: auto;
-      margin-left: auto;
-      margin-top: 10px;
-      background: #4e4a4a;
-      color: #fff;
-      padding: 10px;
-      height: 15vh;
-      width: 30vh;
-      display: grid;
-      place-items: center;
-      border: solid 2px rgb(255, 254, 254);
-      border-radius: 50px;
-      flex: none;
-      box-shadow: 0 4px 8px rgba(255, 254, 254, 0.5);
-    }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-   .divPertama {
-      margin: 20px 0 0 50px;
-      padding: 20px;
-      height: 55vh;
-      width: 60vh;
-      border: solid 2px rgb(123, 0, 0);
-      border-radius: 50px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px  rgb(255, 0, 0), 0 8px 20px rgb(255, 255, 255);
-      background: linear-gradient(to bottom,
-          #000000 0%,
-          #ff0000 50%,
-          #e0e0e0 100%);
-          display: flex;
-          gap: 10px;
-          font-size: 18px;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-      color: #ffffff;
-    }
+      .card-container {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        display: flex;
+        margin: 5vh 0 0 0;
+      }
 
-      .propil {
-      max-width: 100%;
-      width: 185px;
-      height: 185px;
-      border-radius: 10% 10% 10% 10%;
-      object-fit: cover;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 2.3);
-      border: solid 2px rgb(164, 15, 15);
-      margin: 10px 0 0 5px;
-    }
+      .card {
+        height: 50vh;
+        width: 40vh;
+        background-color: #ffffff;
+         display: grid;
+    place-items: center;
+        border-radius: 20px;
+      }
 
+      .card a {
+        height: 5vh;
+        width: 30vh;
+        background-color: red;
+        display: grid;
+       place-items: center;
+       margin-bottom: 50px;
+      }
 
-    button {
-      background-color: #4e4a4a;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 1.0s ease;
-    }
+     img {
+       width: 25vh;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 10px;
+    border: solid 2px red;
+      }
 
-    button:hover {
-      background-color: #000000;
-    }
-
-    h6 {
-      color: transparent;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-      display: grid;
-      place-items: center;
-    }
-
-    #UMUR {
-    
-    }

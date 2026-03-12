@@ -1,146 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>my project</title>
-
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-     <link rel="stylesheet" href="">
-
-     <style>
-
-         .tubuh {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-       background-image: 
-       radial-gradient(circle at center,
-          #ff0000 0%,
-          #f80404fd 30%,
-          #0b0b0b 100%);
-        background-size: cover;
-    
-       min-height: 100vh;
-       min-width: 100vh;
-    }
-
-        .container {
-       width: 80%;
-       min-height: 50vh;
-       margin: 0 auto;
-       background-color: rgb(255, 255, 255);
-       padding: 20px;
-       border-radius: 20px;
-       overflow-y: auto;
-       box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
-        }
-
-    
-    
-        .judul1 {  
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        * {
-            font-family: 'Arial', sans-serif;
-           
-        }
-    
-        .list {
-          list-style: disc;
-         padding-left: 20px;
-         
-        }
-
-        .list::before {
-         
-         
-        }
-    
-        .list li {
-            margin-bottom: 10px;
-            color: #ffffff;
-            mix-blend-mode: difference;  
-            text-shadow: 2px 2px 10px rgb(251, 247, 247, 0.5);
-        }
-    
-        a {
-           display: inline-block;
-            color: #007BFF;
-            text-decoration: none;
-                padding: 5px 10px;
-                border-radius: 5px;
-                transition: background-color 0.5s, color 0.3s;
-                border: 2px solid rgb(0, 123, 255);
-                box-shadow: 0px 0px 10px  rgb(0, 123, 255);
-        }
-    
-        a:hover {
-          color: #007BFF;
-         text-decoration: underline;
-         background-color: #000000;
-        }
-
-        /* box wrapper for the list items */
-        .box {
-          border: 2px solid #333;
-          padding: 10px;
-          border-radius: 10px;
-           background-color: rgba(255, 255, 255, 0.8);
-           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-          display: flex;
-          flex-direction: column;
-        }
-
-        /* footer link styling */
-        .footer-link {
-          text-align: center;
-          margin-top: 20px;
-          padding-top: 15px;
-          border-top: 1px solid #ccc;
-        }
-     </style>
-</head>
-
-
-<body class="tubuh">
-    <div class="container">
-        <h1 class="judul1"><strong>PENGENALAN</strong></h1>
-
-        <!-- wrap the list in a box div so it stays inside and can be styled -->
-        <div class="box">
-          <ol class="list">
-            <li><h2> <strong>Struktur Dasar HTML</strong> </h2></li>
-            <li><p>​Cara Cepat: Di VS Code, ketik tanda seru ! lalu tekan Enter atau Tab untuk membuat struktur dasar secara otomatisl</p></li>
-            <li><h2> <strong>Elemen Penting</strong> </h2></li>
-            <li><p> <b> <code>&lt;!DOCTYPE html&gt;</code> </b>: Memberitahu browser bahwa dokumen ini menggunakan standar HTML5</p></li>
-            <li><p> <b> <code>&lt;html&gt;</code> </b>: Pembungkus utama seluruh konten halaman</p></li>
-            <li><p> <b> <code>&lt;head&gt;</code> </b>: Berisi informasi metadata (seperti judul halaman, encoding, dan viewport) yang tidak tampil langsung di badan halaman</p></li>
-            <li><p> <b> <code>&lt;body&gt;</code> </b>: Tempat meletakkan semua konten yang akan terlihat oleh pengguna</p></li>
-            <li><h2> <strong>Konsep Syntax (Tag & Atribut)</strong> </h2></li>
-            <li><p> <b> <code>&lt;HTML&gt;</code> </b>: Terdiri dari tag pembuka <code>(misal: &lt;title&gt;)</code>  dan tag penutup yang memiliki garis miring <code>(misal: &lt;/title&gt;)</code> . Namun, ada beberapa tag yang tidak memerlukan penutup, seperti tag <code>&lt;meta&gt;</code> .</p></li>
-            <li><p>Atribut: Memberikan informasi tambahan pada tag. Atribut diletakkan di dalam tag pembuka dengan format nama_atribut="nilai" . Contoh: <code>&lt;html lang="en"&gt;</code> atau <code>&lt;meta charset="UTF-8"&gt;</code>.</p></li>
-            <li><h2> <strong>Menjalankan Kode</strong> </h2></li>
-            <li><p>Klik tombol "Go Live" di bagian bawah VS Code (setelah instal Live Server) untuk membuka proyek di browser.</p></li>
-            <li><p>Perubahan pada tag <code>&lt;title&gt;</code> di dalam <code>&lt;head&gt;</code> akan mengubah teks yang muncul pada tab browser.</p></li>
-          </ol>
-
-        <div class="footer-link">
-          <a href="https://youtu.be/R-fZ_dVy2os?si=zAnj_sGGEPF4AXSc" target="_blank"><strong>Video Pengenalan Syntax HTML</strong></a>
-        </div>
-        </div>
-
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card home page</title>
+    <link rel="stylesheet" href="coloring.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>home page</h1>
     </div>
-  
-   
- <script src="java.js"></script>
 
-</body>
+    <div class="card-container">
+      <div id="card_one" class="card">
+        <img src="gengar.jpg" alt="pokemon" />
+        <a href="myProject.html" target="_blank">hello</a>
+      </div>
 
+      <div id="card_two" class="card">
+        <img src="Plum_Blossom_Eleven_9.png" alt="my_bini" />
+        <a href="dulu.html" target="_blank">hello</a>
+      </div>
+
+      <div id="card_tree" class="card">
+        <img src="Coloriage-Pixel-Art-8.png" alt="pixel" />
+        <a href="halaman.html" target="_blank">hello</a>
+      </div>
+    </div>
+
+    <script src="java.js"></script>
+  </body>
 </html>
