@@ -4,6 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      body {
+        background: linear-gradient(135deg, #1a0a2e, #6b21a8);
+        background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+        background: linear-gradient(
+          to right,
+          #7c3aed,
+          #db2777
+        ); /* purple ke pink */
+        min-height: fit-content;
+        height: 10vh;
+      }
+
+      .container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        justify-items: center;
+        height: 100vh;
+        align-items: center;
+      }
+
+      .box {
+        color: rgb(0, 0, 0);
+        background-color: #6b21a8; /* purple-800 */
+        background-color: #7c3aed; /* violet-600 */
+        background-color: #8b5cf6; /* violet-500 */
+        transition:
+          background-color 0.5s,
+          color 0.3s;
+        width: 25vh;
+        height: 25vh;
+        border-radius: 30px;
+        display: grid;
+      }
+
+      .box:hover {
+        color: rgb(255, 255, 255);
+        background-color: #3b0764;
+      }
+
+      h2 {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+      }
+
+      .plagraf {
+        display: flex;
+        gap: 2px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h2>box</h2>
+      </div>
+
+      <div class="box">
+        <h2>box</h2>
+      </div>
+
+      <div class="box">
+        <h2>box</h2>
+      </div>
+    </div>
+  </body>
 </html>
